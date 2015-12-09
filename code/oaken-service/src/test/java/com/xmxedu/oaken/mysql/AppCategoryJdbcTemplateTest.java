@@ -1,6 +1,8 @@
 package com.xmxedu.oaken.mysql;
 
 
+import com.xmxedu.oaken.dao.bll.AppCategoryBLL;
+import com.xmxedu.oaken.dao.bll.BizAppCategoryBLL;
 import com.xmxedu.oaken.sql.AppCategory;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -15,11 +17,11 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 public class AppCategoryJdbcTemplateTest {
 
     @Autowired
-    private JdbcAppCategoryRepository jdbcAppCategoryRepository;
+    private AppCategoryBLL appCategoryBLL;
 
     @Test
     public void GetAppCategoryById(){
-        AppCategory appCategory = jdbcAppCategoryRepository.getAppCategoryById(3);
+        AppCategory appCategory = appCategoryBLL.getAppCategoryById(3);
         if (null == appCategory){
             return;
         }
