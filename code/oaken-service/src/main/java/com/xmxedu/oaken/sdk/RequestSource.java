@@ -7,8 +7,8 @@ import com.google.gson.JsonObject;
  * @version 1.0.0
  */
 
-public interface CoreSdk {
-    public JsonObject convertSdk2Json(String sdkBody);
+public interface RequestSource {
+    public boolean verifySdkBody(String sdkBody);
     public JsonObject filterSdkJson(JsonObject sdkJson);
     public String decryptSdkBody(String sdkBody);
 }
