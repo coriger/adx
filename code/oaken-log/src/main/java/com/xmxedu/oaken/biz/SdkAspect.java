@@ -14,9 +14,11 @@ public class SdkAspect {
 
     private final static Logger logger = LoggerFactory.getLogger(SdkAspect.class);
 
-    @Around("execution(** com.xmxedu.oaken.request.sdk.SdkVersion10.decryptSdkBody(..))")
-    public void logDecryptSdkBody(ProceedingJoinPoint joinPoint){
+    @Around("execution(** com.xmxedu.oaken.request.sdk.SdkVersion10.decryptSdkBody(String)) && args(sdkBody)")
+    public void logDecryptSdkBody(ProceedingJoinPoint joinPoint,String sdkBody){
+
         logger.info("######## A New Sdk Request Incoming #######");
+
         try {
             joinPoint.proceed();
         } catch (Throwable throwable) {
