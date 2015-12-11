@@ -1,13 +1,13 @@
-package com.xmxedu.oaken.s2s;
+package com.xmxedu.oaken.request.sdk;
 
 import com.google.gson.JsonObject;
-import com.xmxedu.oaken.sdk.RequestSource;
+import com.xmxedu.oaken.request.Source;
 
 /**
- * Server 2 Server的请求方式
+ * sdk 1.0 中相关协议解析，转换问题
  * @version 1.0.0
  */
-public class Server2Server implements RequestSource {
+public class SdkVersion10 implements Source {
     public boolean verifySdkBody(String sdkBody) {
         return false;
     }

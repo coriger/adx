@@ -1,4 +1,4 @@
-package com.xmxedu.oaken.sdk;
+package com.xmxedu.oaken.request;
 
 import com.google.gson.JsonObject;
 
@@ -7,7 +7,7 @@ import com.google.gson.JsonObject;
  * @version 1.0.0
  */
 
-public interface RequestSource {
+public interface Source {
     public boolean verifySdkBody(String sdkBody);
     public JsonObject filterSdkJson(JsonObject sdkJson);
     public String decryptSdkBody(String sdkBody);
