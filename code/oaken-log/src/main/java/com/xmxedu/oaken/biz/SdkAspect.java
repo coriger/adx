@@ -14,18 +14,19 @@ public class SdkAspect {
 
     private final static Logger logger = LoggerFactory.getLogger(SdkAspect.class);
 
-    @Around("execution(** com.xmxedu.oaken.request.sdk.SdkVersion10.decryptSdkBody(String)) && args(sdkBody)")
+    @Around("execution(String com.xmxedu.oaken.request.sdk.SdkVersion10.decryptSdkBody(String)) && args(sdkBody)")
     public void logDecryptSdkBody(ProceedingJoinPoint joinPoint,String sdkBody){
 
         logger.info("######## A New Sdk Request Incoming #######");
-
+        Object result = null;
         try {
-            joinPoint.proceed();
+            result = joinPoint.proceed();
         } catch (Throwable throwable) {
             logger.error(" decrypt sdk body encounter an throwable: {}",throwable.getMessage());
+            return;
         }
 
-        logger.info(" decrypt sdk body correctly: {}");
+        logger.info(" decrypt sdk body correctly: {}",(String)result);
     }
 
 }
