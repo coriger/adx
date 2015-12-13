@@ -1,4 +1,4 @@
-package com.xmxedu.oaken.biz;
+package com.xmxedu.oaken.aspect;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
@@ -7,17 +7,19 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Created by xmzheng on 15/12/11.
+ * Sdk Aspect implemention
+ * @version 1.0.0
  */
 @Aspect
 public class SdkAspect {
 
     private final static Logger logger = LoggerFactory.getLogger(SdkAspect.class);
 
-    @Around("execution(String com.xmxedu.oaken.request.sdk.SdkVersion10.decryptSdkBody(String)) && args(sdkBody)")
+    @Around("execution(* com.xmxedu.oaken.request.sdk.SdkVersion10.decryptSdkBody(String)) && args(sdkBody)")
     public void logDecryptSdkBody(ProceedingJoinPoint joinPoint,String sdkBody){
 
         logger.info("######## A New Sdk Request Incoming #######");
+        logger.info(" new sdk request body is: {}",sdkBody);
         Object result = null;
         try {
             result = joinPoint.proceed();

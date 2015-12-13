@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
  * sdk 1.0 中相关协议解析，转换问题
  * @version 1.0.0
  */
-@Service
+@Service("sdkVersion10")
 public class SdkVersion10 implements Source {
     public boolean verifySdkBody(String sdkBody) {
         return false;
