@@ -1,4 +1,4 @@
-package com.xmxedu.oaken.dao.helper;
+package com.xmxedu.oaken.dao;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import org.slf4j.Logger;
@@ -15,7 +15,7 @@ import java.sql.SQLException;
  * @version 1.0.0
  */
 
-@Repository
+@Repository("basicDataSource")
 @PropertySource("classpath:mysql.properties")
 public class BasicDataSource extends DruidDataSource{
     private final static Logger logger = LoggerFactory.getLogger(BasicDataSource.class);

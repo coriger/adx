@@ -1,6 +1,5 @@
 package com.xmxedu.oaken.dao.dal;
 
-import com.xmxedu.oaken.dao.helper.BasicNamedParameterJdbcTemplate;
 import com.xmxedu.oaken.sql.BizAppAd;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
@@ -54,7 +53,7 @@ public class BizAppAdDAL {
                     BizAppAd baa = new BizAppAd();
 
                     baa.setId(resultSet.getInt(BizAppAd.COLUMN_ID));
-                    baa.setAppId(resultSet.getInt(BizAppAd.COLUMN_APP_ID));
+                    baa.setAppId(resultSet.getString(BizAppAd.COLUMN_APP_ID));
                     baa.setAdId(resultSet.getInt(BizAppAd.COLUMN_AD_ID));
                     baa.setStatus(resultSet.getInt(BizAppAd.COLUMN_STATUS));
 

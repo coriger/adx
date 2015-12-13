@@ -1,5 +1,6 @@
-package com.xmxedu.oaken.dao.helper;
+package com.xmxedu.oaken.dao;
 
+import com.xmxedu.oaken.dao.BasicDataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Service;
