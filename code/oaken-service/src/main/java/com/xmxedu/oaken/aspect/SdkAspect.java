@@ -44,7 +44,7 @@ public class SdkAspect {
         }
     }
 
-    @Around("execution(* com.xmxedu.oaken.request.sdk.SdkVersion10.filterSdkJson(String)) && args(sdkJson)")
+    @Around("execution(* com.xmxedu.oaken.request.sdk.SdkVersion10.filterSdkJson(..)) && args(sdkJson)")
     public void logFilterSdkJson(ProceedingJoinPoint joinPoint,JsonObject sdkJson){
         logger.info("filter sdk json and its source is {}",sdkJson);
         Object result = null;

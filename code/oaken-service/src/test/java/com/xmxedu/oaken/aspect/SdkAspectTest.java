@@ -34,4 +34,11 @@ public class SdkAspectTest {
         jo.addProperty("key","test");
         sdkVersion10.verifySdkBody(jo);
     }
+
+    @Test
+    public void filterSdkBodyTest(){
+        JsonObject jo = new JsonObject();
+        jo.addProperty("key","test");
+        sdkVersion10.filterSdkJson(jo);
+    }
 }
