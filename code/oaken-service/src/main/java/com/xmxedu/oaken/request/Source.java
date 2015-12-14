@@ -8,7 +8,7 @@ import com.google.gson.JsonObject;
  */
 
 public interface Source {
-    public boolean verifySdkBody(String sdkBody);
+    public boolean verifySdkBody(JsonObject sdkBody);
     public JsonObject filterSdkJson(JsonObject sdkJson);
-    public String decryptSdkBody(String sdkBody);
+    public JsonObject decryptSdkBody(String sdkBody);
 }

@@ -1,5 +1,6 @@
 package com.xmxedu.oaken.aspect;
 
+import com.google.gson.JsonObject;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
@@ -28,7 +29,34 @@ public class SdkAspect {
             return;
         }
 
-        logger.info(" decrypt sdk body correctly: {}",(String)result);
+        logger.info(" decrypt sdk body correctly: {}",(JsonObject)result);
     }
 
+    @Around("execution(* com.xmxedu.oaken.request.sdk.SdkVersion10.verifySdkBody(..))")
+    public void logVerifySdkBody(ProceedingJoinPoint joinPoint){
+
+        try {
+            Object verify = joinPoint.proceed();
+            logger.info("verify sdk body status: {}",verify);
+        }
+        catch (Throwable throwable){
+            logger.error(" verify sdk body encounter an throwable: {}",throwable.getMessage());
+        }
+    }
+
+    @Around("execution(* com.xmxedu.oaken.request.sdk.SdkVersion10.filterSdkJson(String)) && args(sdkJson)")
+    public void logFilterSdkJson(ProceedingJoinPoint joinPoint,JsonObject sdkJson){
+        logger.info("filter sdk json and its source is {}",sdkJson);
+        Object result = null;
+        try {
+            result = joinPoint.proceed();
+        }
+        catch (Throwable throwable){
+            logger.error("filter sdkJson encounter an throwable: {}",throwable.getMessage());
+            return;
+        }
+
+        logger.info("filter sdk Json correctly: {}",(JsonObject)result);
+
+    }
 }

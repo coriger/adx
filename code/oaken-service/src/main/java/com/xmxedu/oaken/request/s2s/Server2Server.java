@@ -8,7 +8,7 @@ import com.xmxedu.oaken.request.Source;
  * @version 1.0.0
  */
 public class Server2Server implements Source {
-    public boolean verifySdkBody(String sdkBody) {
+    public boolean verifySdkBody(JsonObject sdkJson) {
         return false;
     }
 
@@ -16,7 +16,7 @@ public class Server2Server implements Source {
         return null;
     }
 
-    public String decryptSdkBody(String sdkBody) {
+    public JsonObject decryptSdkBody(String sdkBody) {
         return null;
     }
 }

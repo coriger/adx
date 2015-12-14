@@ -1,5 +1,6 @@
 package com.xmxedu.oaken.aspect;
 
+import com.google.gson.JsonObject;
 import com.xmxedu.oaken.request.Source;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -20,10 +21,17 @@ public class SdkAspectTest {
 
     @Autowired
     @Qualifier("sdkVersion10")
-    private Source sdkVersion10; // attention,this place must using interface, not an specific implementation
+    private Source sdkVersion10; // attention,this must using interface, not a specific implementation
 
     @Test
-    public void mainTest(){
-        String sdkBody = sdkVersion10.decryptSdkBody("the parameters that i pass to it~");
+    public void decryptSdkBodyTest(){
+        JsonObject sdkBody = sdkVersion10.decryptSdkBody("the parameters that i pass to it~");
+    }
+
+    @Test
+    public void verifySdkBodyTest(){
+        JsonObject jo = new JsonObject();
+        jo.addProperty("key","test");
+        sdkVersion10.verifySdkBody(jo);
     }
 }
