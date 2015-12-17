@@ -1,13 +1,11 @@
 package com.xmxedu.oaken.loadimpl;
 
-import java.sql.SQLException;
 import java.util.HashMap;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.google.common.collect.Maps;
-import com.xmxedu.oaken.biz.AdBasicDataCollect;
 import com.xmxedu.oaken.cache.Cache;
 import com.xmxedu.oaken.cache.LocalCache;
 import com.xmxedu.oaken.load.ILoadService;

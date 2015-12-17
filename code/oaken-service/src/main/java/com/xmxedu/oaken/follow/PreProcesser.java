@@ -1,4 +1,4 @@
-package follow;
+package com.xmxedu.oaken.follow;
 
 import org.springframework.stereotype.Service;
 

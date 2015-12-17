@@ -1,6 +1,5 @@
 package com.xmxedu.oaken.biz;
 
-import com.sun.xml.internal.bind.v2.schemagen.xmlschema.Appinfo;
 import com.xmxedu.oaken.dao.bll.*;
 import com.xmxedu.oaken.model.AdBasicData;
 import com.xmxedu.oaken.sql.*;
