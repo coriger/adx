@@ -1,4 +1,4 @@
-package com.xmxedu.oaken.biz;
+package follow;
 
 import org.springframework.stereotype.Service;
 

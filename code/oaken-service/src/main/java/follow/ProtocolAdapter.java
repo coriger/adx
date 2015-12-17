@@ -1,11 +1,11 @@
-package com.xmxedu.oaken.biz;
+package follow;
 
 import org.springframework.stereotype.Service;
 
 /**
- * 反作弊模块
+ * 媒体侧相关请求协议适配
  * @version 1.0.0
  */
 @Service
-public class AntiCheating {
+public class ProtocolAdapter {
 }
