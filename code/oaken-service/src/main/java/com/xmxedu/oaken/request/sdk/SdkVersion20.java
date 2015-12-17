@@ -1,14 +1,14 @@
-package com.xmxedu.oaken.request.s2s;
+package com.xmxedu.oaken.request.sdk;
 
 import com.google.gson.JsonObject;
 import com.xmxedu.oaken.request.Source;
 
 /**
- * Server 2 Server的请求方式
- * @version 1.0.0
+ * sdk 2.0
+ * @version 1.0
  */
-public class Server2Server implements Source {
-    public boolean verifySdkBody(JsonObject sdkJson) {
+public class SdkVersion20 implements Source {
+    public boolean verifySdkBody(JsonObject sdkBody) {
         return false;
     }
 

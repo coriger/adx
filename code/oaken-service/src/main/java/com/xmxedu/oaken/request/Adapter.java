@@ -7,5 +7,5 @@ import com.google.gson.JsonObject;
  * @version 1.0.0
  */
 public interface Adapter {
-    public JsonObject convert(JsonObject jsonObject);
+    public SpecialRequest convert(JsonObject jsonObject);
 }
