@@ -11,6 +11,6 @@
 	<context:annotation-config />
 	<!-- aop -->
 	<aop:aspectj-autoproxy />
-	<bean id="sdkRequestAspect" class="com.xmxedu.oaken.aspect.SdkAspect"></bean>
+	<bean id="sdkRequestAspect" class="com.xmxedu.oaken.aspect.SdkRequestAspect"></bean>
 
 </beans>

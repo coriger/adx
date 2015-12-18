@@ -12,6 +12,6 @@
 	<!-- aop -->
 	<aop:aspectj-autoproxy />
 	<bean id="sdkVersion10" class="com.xmxedu.oaken.request.sdk.SdkVersion10"></bean>
-	<bean id="sdkRequestAspect" class="com.xmxedu.oaken.aspect.SdkAspect"></bean>
+	<bean id="sdkRequestAspect" class="com.xmxedu.oaken.aspect.SdkRequestAspect"></bean>
 	<task:annotation-driven />
 </beans>

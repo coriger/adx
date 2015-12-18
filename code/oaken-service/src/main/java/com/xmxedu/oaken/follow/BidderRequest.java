@@ -3,7 +3,8 @@ package com.xmxedu.oaken.follow;
 import org.springframework.stereotype.Service;
 
 /**
- * Created by xmzheng on 15/12/7.
+ * 第三方平台上游请求
+ * @version 1.0
  */
 @Service
 public class BidderRequest {

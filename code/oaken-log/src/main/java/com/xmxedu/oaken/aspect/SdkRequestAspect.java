@@ -12,9 +12,9 @@ import org.slf4j.LoggerFactory;
  * @version 1.0.0
  */
 @Aspect
-public class SdkAspect {
+public class SdkRequestAspect {
 
-    private final static Logger logger = LoggerFactory.getLogger(SdkAspect.class);
+    private final static Logger logger = LoggerFactory.getLogger(SdkRequestAspect.class);
 
     @Around("execution(* com.xmxedu.oaken.request.sdk.SdkVersion10.decryptSdkBody(String)) && args(sdkBody)")
     public void logDecryptSdkBody(ProceedingJoinPoint joinPoint,String sdkBody){
