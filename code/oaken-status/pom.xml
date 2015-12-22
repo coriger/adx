@@ -11,6 +11,6 @@
         <version>1.0.0-SNAPSHOT</version>
     </parent>
     <groupId>com.xmxedu.oaken</groupId>
-    <artifactId>oaken-audit</artifactId>
-    <name>Oaken Audit</name>
+    <artifactId>oaken-status</artifactId>
+    <name>Oaken Status</name>
 </project>	

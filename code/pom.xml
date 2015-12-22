@@ -25,6 +25,7 @@
         <module>oaken-adx</module>
         <module>oaken-log</module>
         <module>oaken-audit</module>
+        <module>oaken-status</module>
         <module>oaken-statistics</module>
     </modules>
 
