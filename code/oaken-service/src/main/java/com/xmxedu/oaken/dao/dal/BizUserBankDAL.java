@@ -1,6 +1,5 @@
 package com.xmxedu.oaken.dao.dal;
 
-import com.xmxedu.oaken.sql.BizUserApp;
 import com.xmxedu.oaken.sql.BizUserBank;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
