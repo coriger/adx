@@ -5,5 +5,5 @@ package com.xmxedu.oaken.fetch.dsp.jd;
  * @version 1.0
  */
 public class JdRtbHandler {
-    
+
 }
